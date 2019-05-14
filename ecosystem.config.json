@@ -1,5 +1,5 @@
 {
-  "name": "node-crudapi",
+  "name": "node-api",
   "script": "build/src/server.js",
   "log_date_format": "DD/MM/YY HH:mm:ss",
   "args": ["--color"],
