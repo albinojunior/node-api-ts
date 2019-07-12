@@ -40,12 +40,12 @@ $ npm run dev
 #### Development
 
 ```bash
-$ npm build:dev
+$ npm run build:dev
 ```
 
 #### Production
 
 
 ```bash
-$ npm build
+$ npm run build
 ```
