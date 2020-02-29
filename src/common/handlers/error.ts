@@ -1,19 +1,16 @@
 import chalk from "chalk";
 import { HTTP } from "../constants/http";
-import { DefaultReturn } from "../interfaces/return";
+import { ResponseError } from "../interfaces/response-error";
 
 export abstract class ErrorHandler {
-  /**
-   * @param error
-   *
-   */
   public handleUnknownError(
     error: Error
-  ): { data: DefaultReturn; statusCode: number } {
+  ): { errorData: ResponseError; statusCode: number } {
     console.log(chalk.bgRed(chalk.whiteBright("UNKNOWN ERROR: ")), error);
+
     return {
-      data: {
-        error: true,
+      errorData: {
+        code: HTTP.INTERNAL_SERVER_ERROR,
         message: error.message
       },
       statusCode: HTTP.INTERNAL_SERVER_ERROR

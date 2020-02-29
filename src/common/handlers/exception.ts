@@ -1,5 +1,4 @@
 import { ErrorHandler } from "./error";
-import { UniqueConstraintError, ValidationError } from "sequelize";
 
 export abstract class ExceptionHandler extends ErrorHandler {
   private _EXCEPTION_TYPES: { type: any; func: Function }[] = [];
